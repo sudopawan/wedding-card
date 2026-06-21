@@ -1,1298 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>|| Mangalam Bhagwan Vishnu || Ayush & Nandini</title>
-
-  <meta property="og:title" content="शुभ विवाह: Ayush & Nandini" />
-  <meta
-    property="og:description"
-    content="Mrs. RR Pant & Mr. PP Pant cordially invite you to grace the auspicious wedding celebrations of their son Ayush with Nandini in Bhimtal."
-  />
-  <meta
-    property="og:image"
-    content="[images.unsplash.com](https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80)"
-  />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)" />
-  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin />
-  <link
-    href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Marcellus&family=Montserrat:wght@300;400;500;600;700&display=swap)"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --bg: #050b11;
-      --bg-deep: #081723;
-      --lake: #0f3340;
-      --lake-soft: #1e5e73;
-      --mist: #95b8c4;
-      --gold: #d4af37;
-      --gold-soft: #f6e7b2;
-      --gold-deep: #8d6810;
-      --ivory: #f8f1e4;
-      --maroon: #6d1f2a;
-      --rose: #d98b7a;
-      --glass: rgba(7, 20, 31, 0.58);
-      --glass-2: rgba(255, 255, 255, 0.06);
-      --line: rgba(243, 223, 155, 0.22);
-      --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-      --gold-gradient: linear-gradient(135deg, #fff0c1 0%, #d4af37 45%, #8c6610 100%);
-      --teal-gradient: linear-gradient(135deg, #0b2234 0%, #133f4a 50%, #0d2432 100%);
-      --card-gradient: linear-gradient(180deg, rgba(7, 18, 29, 0.86), rgba(8, 22, 33, 0.55));
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      overflow-x: hidden;
-      font-family: 'Montserrat', sans-serif;
-      color: var(--ivory);
-      background:
-        radial-gradient(circle at top, rgba(140, 191, 214, 0.08), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.12), transparent 18%),
-        linear-gradient(180deg, #02070c 0%, #06121c 35%, #081c29 68%, #040b11 100%);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .bg-video {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -5;
-      filter: brightness(0.36) saturate(1.05);
-    }
-
-    .bg-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: -4;
-      background:
-        linear-gradient(180deg, rgba(2, 6, 10, 0.4), rgba(3, 10, 16, 0.85)),
-        radial-gradient(circle at center, rgba(25, 82, 97, 0.18), rgba(0, 0, 0, 0.4));
-    }
-
-    .bg-palace {
-      position: fixed;
-      inset: auto 0 0 0;
-      height: 38vh;
-      z-index: -3;
-      opacity: 0.12;
-      background:
-        linear-gradient(to top, rgba(5, 7, 10, 0.95), transparent),
-        url("[images.unsplash.com](https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80)") center bottom / cover no-repeat;
-      filter: blur(1px);
-    }
-
-    .mist-layer {
-      position: fixed;
-      inset: auto 0 0 0;
-      height: 36vh;
-      z-index: -2;
-      pointer-events: none;
-      filter: blur(34px);
-      background:
-        radial-gradient(circle at 20% 60%, rgba(255,255,255,0.12), transparent 28%),
-        radial-gradient(circle at 70% 70%, rgba(144, 186, 203, 0.16), transparent 26%),
-        radial-gradient(circle at 85% 60%, rgba(255,255,255,0.09), transparent 24%);
-      animation: driftMist 14s ease-in-out infinite alternate;
-    }
-
-    @keyframes driftMist {
-      from { transform: translateX(-2%) translateY(0); opacity: 0.65; }
-      to { transform: translateX(2%) translateY(-10px); opacity: 1; }
-    }
-
-    .orbs,
-    .petals,
-    .sparkles {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .orb,
-    .petal,
-    .spark {
-      position: absolute;
-      display: block;
-    }
-
-    .orb {
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(246, 231, 178, 0.55) 0%, rgba(246, 231, 178, 0.1) 52%, transparent 72%);
-      animation: orbPulse ease-in-out infinite;
-    }
-
-    @keyframes orbPulse {
-      0%, 100% { transform: scale(0.85); opacity: 0.35; }
-      50% { transform: scale(1.12); opacity: 0.82; }
-    }
-
-    .petal {
-      width: 10px;
-      height: 16px;
-      border-radius: 60% 40% 60% 40%;
-      background: linear-gradient(180deg, rgba(255, 231, 190, 0.95), rgba(220, 146, 126, 0.72));
-      box-shadow: 0 0 12px rgba(255, 214, 168, 0.22);
-      opacity: 0.52;
-      animation: petalFall linear infinite;
-    }
-
-    @keyframes petalFall {
-      0% { transform: translateY(-10vh) rotate(0deg) translateX(0); }
-      100% { transform: translateY(115vh) rotate(360deg) translateX(45px); }
-    }
-
-    .spark {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: rgba(255, 238, 176, 0.9);
-      box-shadow: 0 0 8px rgba(255, 230, 152, 0.9);
-      animation: twinkle ease-in-out infinite;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.15; transform: scale(0.7); }
-      50% { opacity: 1; transform: scale(1.4); }
-    }
-
-    .top-frame,
-    .bottom-frame {
-      position: fixed;
-      left: 0;
-      width: 100%;
-      height: 16px;
-      z-index: 20;
-      background: var(--gold-gradient);
-      box-shadow: 0 0 22px rgba(212, 175, 55, 0.3);
-    }
-
-    .top-frame { top: 0; }
-    .bottom-frame { bottom: 0; }
-
-    .music-control {
-      position: fixed;
-      right: 18px;
-      top: 22px;
-      z-index: 30;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(243, 223, 155, 0.24);
-      background: rgba(7, 20, 31, 0.72);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      color: var(--gold-soft);
-      cursor: pointer;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
-
-    .music-control:hover {
-      transform: translateY(-2px) scale(1.03);
-      background: rgba(9, 26, 39, 0.88);
-    }
-
-    .page {
-      position: relative;
-      z-index: 3;
-    }
-
-    .section {
-      width: min(1120px, calc(100% - 28px));
-      margin: 0 auto;
-      padding: 76px 0;
-      position: relative;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 78px;
-      padding-bottom: 70px;
-    }
-
-    .hero-card {
-      position: relative;
-      width: min(960px, 100%);
-      padding: 48px 24px;
-      background: linear-gradient(180deg, rgba(7, 18, 29, 0.6), rgba(7, 18, 29, 0.34));
-      border: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero-card::before,
-    .hero-card::after {
-      content: "";
-      position: absolute;
-      width: 190px;
-      height: 190px;
-      border: 1px solid rgba(243, 223, 155, 0.2);
-      pointer-events: none;
-    }
-
-    .hero-card::before {
-      top: 14px;
-      left: 14px;
-      border-right: none;
-      border-bottom: none;
-    }
-
-    .hero-card::after {
-      right: 14px;
-      bottom: 14px;
-      border-left: none;
-      border-top: none;
-    }
-
-    .hero-card .halo {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(243, 223, 155, 0.08), transparent 18%),
-        radial-gradient(circle at 85% 18%, rgba(110, 180, 201, 0.08), transparent 16%),
-        radial-gradient(circle at 10% 30%, rgba(212, 175, 55, 0.05), transparent 18%);
-      pointer-events: none;
-    }
-
-    .ganesha {
-      font-size: 3rem;
-      color: var(--gold-soft);
-      margin-bottom: 12px;
-      animation: glowPulse 3.2s ease-in-out infinite;
-    }
-
-    @keyframes glowPulse {
-      0%, 100% { transform: scale(1); text-shadow: 0 0 16px rgba(212, 175, 55, 0.18); }
-      50% { transform: scale(1.04); text-shadow: 0 0 28px rgba(212, 175, 55, 0.38); }
-    }
-
-    .invocation {
-      font-family: 'Cinzel', serif;
-      font-size: 0.84rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 18px;
-    }
-
-    .shloka {
-      font-family: 'Marcellus', serif;
-      line-height: 1.9;
-      color: #f6ebc8;
-      max-width: 760px;
-      margin: 0 auto 18px;
-      font-size: 1.06rem;
-    }
-
-    .family-line,
-    .sub-line {
-      line-height: 1.85;
-      color: rgba(248, 241, 228, 0.88);
-      font-size: 0.98rem;
-    }
-
-    .parents {
-      margin-top: 8px;
-      margin-bottom: 16px;
-      font-family: 'Cinzel', serif;
-      font-size: 1.08rem;
-      color: var(--gold-soft);
-      letter-spacing: 1px;
-    }
-
-    .hero-names {
-      margin-top: 14px;
-      margin-bottom: 10px;
-    }
-
-    .hero-names h1 {
-      font-family: 'Great Vibes', cursive;
-      font-weight: 400;
-      line-height: 1.02;
-      font-size: clamp(3.9rem, 8vw, 7.4rem);
-      color: #fff5de;
-      text-shadow:
-        0 0 16px rgba(243, 223, 155, 0.16),
-        0 12px 30px rgba(0, 0, 0, 0.38);
-      animation: shimmerNames 5s ease-in-out infinite;
-    }
-
-    @keyframes shimmerNames {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-2px); }
-    }
-
-    .ampersand {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--gold);
-      margin: 6px 0;
-    }
-
-    .tagline {
-      margin-top: 16px;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 760px;
-      line-height: 1.9;
-      font-size: clamp(1.08rem, 2.5vw, 1.5rem);
-      font-family: 'Marcellus', serif;
-      color: #f8eed0;
-    }
-
-    .hero-pills {
-      margin-top: 26px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: center;
-    }
-
-    .pill {
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(243, 223, 155, 0.2);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--ivory);
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    .scroll-cue {
-      margin-top: 30px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 0.82rem;
-      color: var(--gold-soft);
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.78; }
-      50% { transform: translateY(8px); opacity: 1; }
-    }
-
-    .content-card {
-      position: relative;
-      padding: 34px 24px;
-      background: var(--card-gradient);
-      border: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .content-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 22%),
-        radial-gradient(circle at bottom left, rgba(110, 180, 201, 0.08), transparent 24%);
-      pointer-events: none;
-    }
-
-    .section-kicker {
-      text-align: center;
-      font-size: 0.82rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 10px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      color: #fff2cf;
-      margin-bottom: 14px;
-    }
-
-    .section-copy {
-      max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
-      line-height: 1.9;
-      color: rgba(248, 241, 228, 0.9);
-      font-size: 1rem;
-    }
-
-    .royal-banner {
-      margin-top: 30px;
-      min-height: 280px;
-      border: 1px solid rgba(243, 223, 155, 0.18);
-      background:
-        linear-gradient(180deg, rgba(5, 10, 18, 0.22), rgba(5, 10, 18, 0.56)),
-        url("[images.unsplash.com](https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1600&q=80)") center center / cover no-repeat;
-      position: relative;
-      display: flex;
-      align-items: end;
-      overflow: hidden;
-    }
-
-    .royal-banner::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, transparent 20%, rgba(4, 10, 16, 0.72) 100%),
-        radial-gradient(circle at 50% 20%, rgba(243, 223, 155, 0.12), transparent 24%);
-    }
-
-    .royal-caption {
-      position: relative;
-      z-index: 2;
-      padding: 26px 22px;
-      max-width: 760px;
-    }
-
-    .royal-caption h3 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: #fff0c0;
-      margin-bottom: 8px;
-    }
-
-    .royal-caption p {
-      line-height: 1.85;
-      color: rgba(248, 241, 228, 0.9);
-    }
-
-    .schedule-grid,
-    .video-grid,
-    .venue-grid,
-    .highlight-grid {
-      display: grid;
-      gap: 22px;
-      margin-top: 32px;
-    }
-
-    .schedule-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .video-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .venue-grid {
-      grid-template-columns: 1.08fr 0.92fr;
-      align-items: stretch;
-    }
-
-    .highlight-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .event-card,
-    .video-card,
-    .highlight-card {
-      position: relative;
-      border: 1px solid rgba(243, 223, 155, 0.18);
-      background: linear-gradient(180deg, rgba(109, 31, 42, 0.2), rgba(8, 22, 33, 0.52));
-      overflow: hidden;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.26);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    }
-
-    .event-card:hover,
-    .video-card:hover,
-    .highlight-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.34);
-      border-color: rgba(243, 223, 155, 0.36);
-    }
-
-    .event-card {
-      padding: 28px 22px;
-    }
-
-    .event-card::before {
-      content: "✦";
-      position: absolute;
-      top: 12px;
-      right: 16px;
-      color: var(--gold);
-      font-size: 1rem;
-    }
-
-    .event-name {
-      font-family: 'Cinzel', serif;
-      color: #fff0c0;
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-    }
-
-    .event-detail {
-      line-height: 1.9;
-      color: rgba(248, 241, 228, 0.93);
-      font-size: 0.99rem;
-    }
-
-    .event-detail strong {
-      color: var(--gold-soft);
-    }
-
-    .video-card {
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .video-card video {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      background: #08111a;
-    }
-
-    .video-card-body {
-      padding: 18px 16px 20px;
-    }
-
-    .video-tag {
-      display: inline-block;
-      margin-bottom: 10px;
-      font-size: 0.72rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-    }
-
-    .video-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.1rem;
-      color: #fff0c0;
-      margin-bottom: 8px;
-    }
-
-    .video-copy {
-      line-height: 1.8;
-      font-size: 0.93rem;
-      color: rgba(248, 241, 228, 0.88);
-    }
-
-    .highlight-card {
-      padding: 24px 18px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .highlight-icon {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: var(--gold-soft);
-    }
-
-    .highlight-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.04rem;
-      color: #fff0c0;
-      margin-bottom: 8px;
-    }
-
-    .highlight-copy {
-      line-height: 1.8;
-      font-size: 0.94rem;
-      color: rgba(248, 241, 228, 0.88);
-    }
-
-    .venue-visual {
-      min-height: 390px;
-      border: 1px solid rgba(243, 223, 155, 0.18);
-      background:
-        linear-gradient(180deg, rgba(5, 10, 16, 0.16), rgba(5, 10, 16, 0.52)),
-        url("[images.unsplash.com](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80)") center center / cover no-repeat;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .venue-visual::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(16, 59, 70, 0.08), rgba(7, 17, 27, 0.42)),
-        radial-gradient(circle at 72% 22%, rgba(255,255,255,0.14), transparent 16%);
-    }
-
-    .venue-panel {
-      padding: 28px 24px;
-      border: 1px solid rgba(243, 223, 155, 0.16);
-      background: linear-gradient(180deg, rgba(7, 18, 29, 0.8), rgba(8, 22, 33, 0.45));
-    }
-
-    .venue-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.56rem;
-      color: #fff0c0;
-      margin-bottom: 12px;
-    }
-
-    .venue-text {
-      line-height: 1.9;
-      color: rgba(248, 241, 228, 0.92);
-      margin-bottom: 16px;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-
-    .info-item {
-      padding: 14px 16px;
-      border: 1px solid rgba(243, 223, 155, 0.14);
-      background: rgba(255, 255, 255, 0.04);
-      line-height: 1.75;
-      color: #f8f1e4;
-    }
-
-    .info-item span {
-      display: block;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold-soft);
-      margin-bottom: 5px;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px 24px;
-      font-size: 0.82rem;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      font-weight: 600;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--gold-gradient);
-      color: #31170d;
-      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.24);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 32px rgba(212, 175, 55, 0.3);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(243, 223, 155, 0.24);
-      color: var(--ivory);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .rsvp-wrap {
-      width: min(760px, 100%);
-      margin: 0 auto;
-    }
-
-    .rsvp-form {
-      display: grid;
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .form-group {
-      display: grid;
-      gap: 8px;
-    }
-
-    .form-group label {
-      color: var(--gold-soft);
-      font-size: 0.92rem;
-      letter-spacing: 0.5px;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 15px 16px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(243, 223, 155, 0.18);
-      color: var(--ivory);
-      font-size: 0.98rem;
-      outline: none;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-    }
-
-    .form-control:focus {
-      border-color: rgba(243, 223, 155, 0.5);
-      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.08);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    select.form-control option {
-      color: #111;
-    }
-
-    .footer-note {
-      margin-top: 24px;
-      text-align: center;
-      line-height: 1.8;
-      color: rgba(248, 241, 228, 0.82);
-      font-size: 0.95rem;
-    }
-
-    .closing {
-      text-align: center;
-      padding-bottom: 110px;
-    }
-
-    .closing-line {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(2.2rem, 4.5vw, 3.7rem);
-      color: #fff2cf;
-      margin-bottom: 12px;
-    }
-
-    .closing-copy {
-      max-width: 740px;
-      margin: 0 auto;
-      line-height: 1.9;
-      color: rgba(248, 241, 228, 0.88);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.85s ease, transform 0.85s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 980px) {
-      .schedule-grid,
-      .video-grid,
-      .venue-grid,
-      .highlight-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .section {
-        width: min(100% - 22px, 1120px);
-        padding: 58px 0;
-      }
-
-      .hero-card {
-        padding: 38px 18px;
-      }
-
-      .invocation {
-        font-size: 0.76rem;
-        letter-spacing: 2.6px;
-      }
-
-      .music-control {
-        width: 48px;
-        height: 48px;
-        right: 14px;
-      }
-
-      .pill {
-        width: 100%;
-      }
-
-      .btn-row {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pawan & Upasana | Sacred Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--gold:#d4af37;
+--maroon:#6b0f1a;
+--cream:#faf4e8;
+--dark:#24150f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Cormorant Garamond',serif;
+background:var(--cream);
+color:var(--dark);
+overflow-x:hidden;
+}
+#envelope{
+position:fixed;inset:0;z-index:9999;
+display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#4f0914,#7f1d2d);
+}
+.envelope-wrap{position:relative;width:min(700px,90vw);height:420px;cursor:pointer}
+.env-body{
+position:absolute;bottom:0;width:100%;height:260px;
+background:#f5e6c8;border-radius:0 0 12px 12px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+.env-flap{
+position:absolute;top:0;width:100%;height:220px;
+background:#ead6b0;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1.2s;
+}
+.seal{
+position:absolute;left:50%;top:145px;transform:translateX(-50%);
+width:90px;height:90px;border-radius:50%;
+background:var(--maroon);color:gold;
+display:flex;align-items:center;justify-content:center;
+font-size:38px;font-weight:bold;z-index:3;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+.invite-card{
+position:absolute;left:50%;bottom:40px;transform:translateX(-50%);
+width:80%;background:white;padding:30px;text-align:center;
+transition:1.3s;
+border:3px solid var(--gold);
+}
+.open .env-flap{transform:rotateX(180deg)}
+.open .invite-card{bottom:220px}
+.hide{opacity:0;visibility:hidden;transition:1s}
+.hero{
+min-height:100vh;
+display:flex;align-items:center;justify-content:center;
+text-align:center;
+padding:80px 20px;
+background:
+linear-gradient(rgba(250,244,232,.72),rgba(250,244,232,.82)),
+url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+}
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:clamp(5rem,11vw,9rem);
+color:var(--maroon);
+}
+.section{padding:90px 20px;max-width:1200px;margin:auto}
+.title{
+font-family:Cinzel,serif;
+text-align:center;color:var(--maroon);
+margin-bottom:20px;font-size:2.5rem;
+}
+.divider{text-align:center;color:var(--gold);font-size:2rem;margin:25px 0}
+.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.card{
+background:linear-gradient(135deg,#6b0f1a,#8c2232);
+color:white;padding:35px;border-radius:18px;
+border:3px solid var(--gold);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+.card h3{font-family:Cinzel;color:#ffe9a8;margin-bottom:15px}
+.venue{
+position:relative;border-radius:24px;overflow:hidden;
+min-height:500px;
+background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover;
+}
+.overlay{
+position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.65));
+display:flex;align-items:end;padding:50px;color:white;
+}
+.rsvp{
+max-width:800px;margin:auto;
+background:linear-gradient(180deg,#fffaf0,#f8edd8);
+padding:40px;border:2px solid var(--gold);
+border-radius:20px;
+}
+label{display:block;margin-top:18px;font-weight:600}
+select,input,textarea{
+width:100%;padding:14px;border:1px solid #d5c6a6;
+margin-top:8px;background:white;
+}
+button{
+background:var(--maroon);color:white;border:none;
+padding:14px 26px;margin-top:20px;cursor:pointer;
+}
+.blessings{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;margin-top:30px;
+}
+.bless{
+background:#fff8ec;padding:20px;border-left:4px solid var(--gold)
+}
+footer{
+background:var(--maroon);color:white;text-align:center;
+padding:80px 20px;
+}
+.garland{
+font-size:30px;text-align:center;letter-spacing:6px;color:#d88;
+}
+</style>
 </head>
 <body>
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="[cdn.coverr.co](https://cdn.coverr.co/videos/coverr-mountain-lake-1560678334148?download=1080p)" type="video/mp4" />
-  </video>
 
-  <div class="bg-overlay"></div>
-  <div class="bg-palace"></div>
-  <div class="mist-layer"></div>
-  <div class="orbs" id="orbs"></div>
-  <div class="petals" id="petals"></div>
-  <div class="sparkles" id="sparkles"></div>
-  <div class="top-frame"></div>
-  <div class="bottom-frame"></div>
+<div id="envelope">
+<div class="envelope-wrap" onclick="openInvite()">
+<div class="env-flap"></div>
+<div class="env-body"></div>
+<div class="seal">ॐ</div>
+<div class="invite-card">
+<h2 style="font-family:Cinzel">Pawan & Upasana</h2>
+<p>Click the sacred seal to open your invitation</p>
+</div>
+</div>
+</div>
 
-  <audio id="bg-music" loop>
-    <source src="[soundhelix.com](https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3)" type="audio/mpeg" />
-  </audio>
+<section class="hero">
+<div>
+<div class="garland">🌼 🌸 🪔 🌸 🌼</div>
+<div style="font-size:60px;color:#d4af37">🕉</div>
 
-  <button class="music-control" id="music-btn" aria-label="Toggle music">♪</button>
+<p style="font-size:1.3rem;line-height:1.8">
+वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+</p>
 
-  <main class="page">
-    <section class="section hero">
-      <div class="hero-card reveal">
-        <div class="halo"></div>
-        <div class="ganesha">ॐ</div>
-        <div class="invocation">|| Mangalam Bhagwan Vishnu ||</div>
+<div class="divider">❁ ❁ ❁</div>
 
-        <div class="shloka">
-          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br />
-          निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
-        </div>
+<p>With the blessings of</p>
+<h2 style="font-family:Cinzel">Mrs. Rani Pandey & Mr. R.C Pandey</h2>
 
-        <p class="family-line">With the divine blessings of Almighty</p>
-        <p class="sub-line">and cordially invited by</p>
-        <div class="parents">Mrs. RR Pant & Mr. PP Pant</div>
-        <p class="sub-line">Please join us to celebrate the sacred union of</p>
+<h1>Pawan <br>❦<br> Upasana</h1>
 
-        <div class="hero-names">
-          <h1>Ayush</h1>
-          <div class="ampersand">&</div>
-          <h1>Nandini</h1>
-        </div>
+<p style="max-width:800px;margin:auto;font-size:1.4rem">
+Amidst the serene beauty of Bhimtal, where mountains embrace the lake and timeless traditions unite two families, we invite you to celebrate our sacred union.
+</p>
+</div>
+</section>
 
-        <p class="tagline">
-          Where the grace of tradition meets the serenity of mountains and lakes,
-          two hearts unite in a celebration woven with blessings, beauty, and forever.
-        </p>
+<section class="section">
+<h2 class="title">Wedding Celebrations</h2>
+<div class="divider">🪔 ✦ 🌸 ✦ 🪔</div>
+<div class="events">
+<div class="card">
+<h3>🎶 Sangeet Sandhya</h3>
+<p><b>20 November 2026</b></p>
+<p>5:00 PM Onwards</p>
+<p>Hotel Neelesh Inn, Bhimtal</p>
+</div>
 
-        <div class="hero-pills">
-          <div class="pill">Bhimtal, Uttarakhand</div>
-          <div class="pill">20-21 November 2026</div>
-          <div class="pill">Royal Hindu Wedding Celebration</div>
-        </div>
+<div class="card">
+<h3>🔥 Shubh Vivah</h3>
+<p><b>21 November 2026</b></p>
+<p>11:00 AM Onwards</p>
+<p>Hotel Neelesh Inn, Bhimtal</p>
+</div>
+</div>
+</section>
 
-        <div class="scroll-cue">Scroll for the celebration</div>
-      </div>
-    </section>
+<section class="section">
+<h2 class="title">Bhimtal Awaits</h2>
+<div class="venue">
+<div class="overlay">
+<div>
+<h2 style="font-family:Cinzel;font-size:3rem">Hotel Neelesh Inn</h2>
+<p style="font-size:1.3rem;margin-top:10px">
+Nestled beside the tranquil waters of Bhimtal, surrounded by hills, mist and nature's beauty.
+</p>
+<a style="display:inline-block;margin-top:20px;background:gold;color:#4f0914;padding:12px 22px;text-decoration:none"
+href="https://www.google.com/maps/dir//Hotel+Neelesh+Inn" target="_blank">
+📍 View Directions
+</a>
+</div>
+</div>
+</div>
+</section>
 
-    <section class="section">
-      <div class="content-card reveal">
-        <div class="section-kicker">Royal Theme</div>
-        <h2 class="section-title">A Palace Dream in the Hills</h2>
-        <p class="section-copy">
-          Inspired by grand royal invitation videos, this celebration brings together divine Hindu wedding elegance,
-          luminous palace warmth, and the breathtaking calm of Bhimtal's scenic beauty.
-        </p>
+<section class="section">
+<h2 class="title">RSVP & Blessings</h2>
+<div class="rsvp">
+<label>Your Name</label>
+<input placeholder="Enter your name">
 
-        <div class="royal-banner">
-          <div class="royal-caption">
-            <h3>Where regal splendour meets the stillness of the lake</h3>
-            <p>
-              Golden lights, sacred rituals, romantic ambience, and the majesty of the hills set the tone
-              for a wedding celebration that feels timeless, intimate, and unforgettable.
-            </p>
-          </div>
-        </div>
+<label>Attendance</label>
+<select>
+<option>Will attend both Sangeet & Wedding 🌸</option>
+<option>Will attend only Wedding 💍</option>
+<option>Will attend only Sangeet 🎶</option>
+<option>Unable to attend due to unavoidable circumstances 🙏</option>
+</select>
 
-        <div class="highlight-grid">
-          <div class="highlight-card">
-            <div class="highlight-icon">👑</div>
-            <div class="highlight-title">Royal Elegance</div>
-            <div class="highlight-copy">
-              Palace-inspired styling, warm gold glow, and graceful ceremonial richness throughout the invite.
-            </div>
-          </div>
+<label>Number of Guests</label>
+<select>
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5+ Guests</option>
+</select>
 
-          <div class="highlight-card">
-            <div class="highlight-icon">🏔️</div>
-            <div class="highlight-title">Hills & Lakes</div>
-            <div class="highlight-copy">
-              Scenic visuals shaped around mountain air, tranquil waters, and a dreamy twilight mood.
-            </div>
-          </div>
+<label>Blessing for the Couple</label>
+<textarea rows="4"></textarea>
 
-          <div class="highlight-card">
-            <div class="highlight-icon">🪔</div>
-            <div class="highlight-title">Sacred Celebration</div>
-            <div class="highlight-copy">
-              A refined Hindu wedding atmosphere with devotion, music, blessings, and luminous festivity.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<button>Send Blessings</button>
+</div>
 
-    <section class="section">
-      <div class="content-card reveal">
-        <div class="section-kicker">Animated Invitation Experience</div>
-        <h2 class="section-title">Wedding Video Highlights</h2>
-        <p class="section-copy">
-          These animated sections bring motion and richness to the card. Replace these clips later with your own curated files for an even stronger final result.
-        </p>
+<div class="blessings">
+<div class="bless">🙏 May your married life be filled with joy and prosperity.</div>
+<div class="bless">🌸 Wishing both families happiness and togetherness.</div>
+<div class="bless">🪔 May Lord Ganesha bless your new journey.</div>
+</div>
+</section>
 
-        <div class="video-grid">
-          <div class="video-card">
-            <video autoplay muted loop playsinline>
-              <source src="[cdn.coverr.co](https://cdn.coverr.co/videos/coverr-aerial-view-of-a-lake-1570056370634?download=1080p)" type="video/mp4" />
-            </video>
-            <div class="video-card-body">
-              <div class="video-tag">Scenic Prelude</div>
-              <div class="video-title">Mountains, Water, and Wonder</div>
-              <div class="video-copy">
-                A cinematic opening layer that sets the Bhimtal mood with flowing landscape movement and calm natural grandeur.
-              </div>
-            </div>
-          </div>
+<footer>
+<div style="font-size:40px">🪔</div>
+<h2 style="font-family:Great Vibes;font-size:4rem">Pawan & Upasana</h2>
+<p>21 November 2026 • Bhimtal, Uttarakhand</p>
+<p style="margin-top:15px">॥ मंगलम् भगवान विष्णुः ॥</p>
+</footer>
 
-          <div class="video-card">
-            <video autoplay muted loop playsinline>
-              <source src="[cdn.coverr.co](https://cdn.coverr.co/videos/coverr-candles-in-the-dark-1561664220348?download=1080p)" type="video/mp4" />
-            </video>
-            <div class="video-card-body">
-              <div class="video-tag">Sacred Glow</div>
-              <div class="video-title">Diya and Ceremony Ambience</div>
-              <div class="video-copy">
-                Warm ceremonial lighting adds a devotional wedding feel, echoing the beauty of evening rituals and celebration.
-              </div>
-            </div>
-          </div>
-
-          <div class="video-card">
-            <video autoplay muted loop playsinline>
-              <source src="[cdn.coverr.co](https://cdn.coverr.co/videos/coverr-wedding-rings-close-up-1561309065416?download=1080p)" type="video/mp4" />
-            </video>
-            <div class="video-card-body">
-              <div class="video-tag">Sacred Union</div>
-              <div class="video-title">Love in Royal Detail</div>
-              <div class="video-copy">
-                A romantic motion panel to give the invite a premium wedding-film quality and a more emotionally rich visual rhythm.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="content-card reveal">
-        <div class="section-kicker">Mangal Utsav</div>
-        <h2 class="section-title">Wedding Celebrations</h2>
-        <p class="section-copy">
-          We invite you to be part of music, blessings, sacred vows, and joyous togetherness.
-        </p>
-
-        <div class="schedule-grid">
-          <div class="event-card">
-            <div class="event-name">Sangeet Sandhya</div>
-            <div class="event-detail">
-              <strong>Date</strong><br />
-              November 20, 2026<br /><br />
-
-              <strong>Time</strong><br />
-              5:00 PM onwards<br /><br />
-
-              <strong>Venue</strong><br />
-              Amar Hotel<br />
-              Bhimtal, Uttarakhand
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-name">Shubh Vivah</div>
-            <div class="event-detail">
-              <strong>Date</strong><br />
-              November 21, 2026<br /><br />
-
-              <strong>Time</strong><br />
-              11:00 AM onwards<br /><br />
-
-              <strong>Venue</strong><br />
-              Amar Hotel<br />
-              Bhimtal, Uttarakhand
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="content-card reveal">
-        <div class="section-kicker">Venue</div>
-        <h2 class="section-title">Amar Hotel, Bhimtal</h2>
-
-        <div class="venue-grid">
-          <div class="venue-visual"></div>
-
-          <div class="venue-panel">
-            <div class="venue-title">A Celebration by the Lake, Beneath the Blessing of the Hills</div>
-            <p class="venue-text">
-              Our wedding unfolds in the tranquil beauty of Bhimtal, where shimmering waters,
-              cool mountain breezes, and sacred joy come together in a setting full of warmth and wonder.
-            </p>
-
-            <div class="info-list">
-              <div class="info-item">
-                <span>Venue</span>
-                Amar Hotel, Bhimtal, Uttarakhand
-              </div>
-
-              <div class="info-item">
-                <span>Events</span>
-                20 November 2026 - Sangeet Sandhya<br />
-                21 November 2026 - Shubh Vivah
-              </div>
-
-              <div class="info-item">
-                <span>Atmosphere</span>
-                Royal wedding styling, scenic mountain beauty, serene lake-side charm, and sacred celebration
-              </div>
-            </div>
-
-            <div class="btn-row">
-              <a
-                href="[maps.google.com](https://maps.google.com/?q=Amar+Hotel+Bhimtal)"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-primary"
-              >
-                View Location
-              </a>
-
-              <a href="#rsvp" class="btn btn-secondary">
-                Send Blessings
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="rsvp">
-      <div class="content-card reveal rsvp-wrap">
-        <div class="section-kicker">R.S.V.P.</div>
-        <h2 class="section-title">Your Presence Will Be Our Blessing</h2>
-        <p class="section-copy">
-          We would be honoured to celebrate this beautiful occasion with you.
-        </p>
-
-        <form class="rsvp-form" id="rsvpForm">
-          <div class="form-group">
-            <label for="guest-name">Guest Name (अतिथि का नाम)</label>
-            <input class="form-control" type="text" id="guest-name" required placeholder="Enter full name" />
-          </div>
-
-          <div class="form-group">
-            <label for="attendance">Will you join us?</label>
-            <select class="form-control" id="attendance" required>
-              <option value="Will attend all beautiful ceremonies! 🌸">Will attend all beautiful ceremonies! 🌸</option>
-              <option value="Will attend Sangeet Sandhya only 🎶">Will attend Sangeet Sandhya only 🎶</option>
-              <option value="Will attend Shubh Vivah only 💍">Will attend Shubh Vivah only 💍</option>
-              <option value="Will be there in spirit and with blessings 🙏">Will be there in spirit and with blessings 🙏</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="count">Number of Guests</label>
-            <input class="form-control" type="number" id="count" min="1" max="20" value="1" required />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Blessings / Message</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="4"
-              placeholder="Write your wishes for the couple..."
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit RSVP</button>
-        </form>
-
-        <div class="footer-note">
-          With folded hands and heartfelt joy, we look forward to celebrating together.
-        </div>
-      </div>
-    </section>
-
-    <section class="section closing">
-      <div class="reveal">
-        <div class="closing-line">With Love and Sacred Blessings</div>
-        <p class="closing-copy">
-          May this union be as peaceful as the lake, as enduring as the mountains,
-          and as radiant as the golden light of celebration.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    const music = document.getElementById("bg-music");
-    const musicBtn = document.getElementById("music-btn");
-    let isPlaying = false;
-
-    function playMusic() {
-      music.play().then(() => {
-        isPlaying = true;
-        musicBtn.textContent = "♫";
-      }).catch(() => {
-        musicBtn.textContent = "♪";
-      });
-    }
-
-    function toggleMusic() {
-      if (isPlaying) {
-        music.pause();
-        isPlaying = false;
-        musicBtn.textContent = "♪";
-      } else {
-        music.play().then(() => {
-          isPlaying = true;
-          musicBtn.textContent = "♫";
-        }).catch(() => {
-          musicBtn.textContent = "♪";
-        });
-      }
-    }
-
-    musicBtn.addEventListener("click", toggleMusic);
-
-    document.body.addEventListener("click", () => {
-      if (!isPlaying) playMusic();
-    }, { once: true });
-
-    function createPetals() {
-      const container = document.getElementById("petals");
-      for (let i = 0; i < 20; i++) {
-        const petal = document.createElement("span");
-        petal.className = "petal";
-        petal.style.left = Math.random() * 100 + "vw";
-        petal.style.animationDuration = (10 + Math.random() * 10) + "s";
-        petal.style.animationDelay = (Math.random() * 8) + "s";
-        petal.style.opacity = (0.2 + Math.random() * 0.42).toFixed(2);
-        petal.style.transform = `scale(${0.65 + Math.random() * 1.1})`;
-        container.appendChild(petal);
-      }
-    }
-
-    function createOrbs() {
-      const container = document.getElementById("orbs");
-      for (let i = 0; i < 10; i++) {
-        const orb = document.createElement("span");
-        orb.className = "orb";
-        const size = 80 + Math.random() * 170;
-        orb.style.width = size + "px";
-        orb.style.height = size + "px";
-        orb.style.left = Math.random() * 100 + "vw";
-        orb.style.top = Math.random() * 100 + "vh";
-        orb.style.animationDuration = (5 + Math.random() * 6) + "s";
-        orb.style.animationDelay = (Math.random() * 4) + "s";
-        container.appendChild(orb);
-      }
-    }
-
-    function createSparkles() {
-      const container = document.getElementById("sparkles");
-      for (let i = 0; i < 36; i++) {
-        const spark = document.createElement("span");
-        spark.className = "spark";
-        spark.style.left = Math.random() * 100 + "vw";
-        spark.style.top = Math.random() * 100 + "vh";
-        spark.style.animationDuration = (1.8 + Math.random() * 3.2) + "s";
-        spark.style.animationDelay = (Math.random() * 3) + "s";
-        container.appendChild(spark);
-      }
-    }
-
-    function revealOnScroll() {
-      const reveals = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, { threshold: 0.15 });
-
-      reveals.forEach((el) => observer.observe(el));
-    }
-
-    function sendRSVP(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("guest-name").value.trim();
-      const status = document.getElementById("attendance").value;
-      const count = document.getElementById("count").value;
-      const message = document.getElementById("message").value.trim();
-
-      const blessing = `
-Thank you, ${name}!
-
-Your response has been received.
-
-Response: ${status}
-Guests: ${count}
-${message ? `Message: ${message}` : ""}
-
-We look forward to celebrating together in Bhimtal. 🙏
-      `.trim();
-
-      alert(blessing);
-      document.getElementById("rsvpForm").reset();
-      document.getElementById("count").value = 1;
-    }
-
-    document.getElementById("rsvpForm").addEventListener("submit", sendRSVP);
-
-    createPetals();
-    createOrbs();
-    createSparkles();
-    revealOnScroll();
-  </script>
+<script>
+function openInvite(){
+document.querySelector('.envelope-wrap').classList.add('open');
+setTimeout(()=>{
+document.getElementById('envelope').classList.add('hide');
+},1500);
+}
+</script>
 </body>
 </html>
