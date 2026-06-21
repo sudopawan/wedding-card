@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush & Nandini's Wedding Invitation</title>
+    
+    <!-- Open Graph Tags for Premium WhatsApp Preview -->
+    <meta property="og:title" content="Wedding Invitation: Ayush & Nandini" />
+    <meta property="og:description" content="Together with their families, Ayush & Nandini invite you to celebrate their wedding in Bhimtal." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Library for Scroll Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        :root {
+            --gold: #dfba6b;
+            --dark-blue: #0b1d33;
+            --misty-blue: #1b355a;
+            --cream: #fbf9f5;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Ambient Background Overlay for Bhimtal Aesthetic */
+        .scenery-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(11, 29, 51, 0.85), rgba(27, 53, 90, 0.5)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1080&q=80') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Typography styling */
+        .family-intro {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .parents-names {
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: #fff;
+            margin: -10px 0;
+        }
+
+        .tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-top: 15px;
+        }
+
+        /* Cards for Events */
+        .event-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 40px 0;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(223, 186, 107, 0.3);
+            border-radius: 15px;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .event-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .event-details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #dfba6b, #b38f4e);
+            color: var(--dark-blue);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(223, 186, 107, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(223, 186, 107, 0.6);
+        }
+
+        /* RSVP Form Styling */
+        .rsvp-form {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(11, 29, 51, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--gold);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group select option {
+            background: var(--dark-blue);
+        }
+
+        /* Audio Player Controller */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(223, 186, 107, 0.9);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .scroll-indicator {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            animation: bounce 2s infinite;
+            margin-top: 40px;
+            text-transform: uppercase;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scenery Background Layer -->
+    <div class="scenery-bg"></div>
+
+    <!-- Music Player (Hidden audio element) -->
+    <!-- Replace the src URL with any instrumental audio file link you prefer -->
+    <audio id="bg-music" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <div class="music-control" id="music-btn" onclick="toggleMusic()">🎵</div>
+
+    <!-- SECTION 1: THE WELCOME HERO -->
+    <div class="section">
+        <p class="family-intro" data-aos="fade-down" data-aos-duration="1200">With the blessings of</p>
+        <p class="parents-names" data-aos="fade-down" data-aos-duration="1500">Mrs. RR Pant & Mr. PP Pant</p>
+        
+        <p class="family-intro" data-aos="fade-up" data-aos-delay="300">We cordially invite you to the wedding of</p>
+        <h1 data-aos="zoom-in" data-aos-duration="1500">Ayush</h1>
+        <div class="ampersand" data-aos="fade-in" data-aos-delay="500">&</div>
+        <h1 data-aos="zoom-in" data-aos-duration="1500">Nandini</h1>
+        
+        <p class="tagline" data-aos="fade-up" data-aos-delay="800">In the lap of mountains & lakes...</p>
+        
+        <div class="scroll-indicator">↓ Swipe Up to Enter ↓</div>
+    </div>
+
+    <!-- SECTION 2: THE ITINERARY -->
+    <div class="section" style="background: linear-gradient(to bottom, rgba(11,29,51,0.5), rgba(11,29,51,0.9));">
+        <h1 data-aos="fade-down">The Celebrations</h1>
+        <p style="color: rgba(255,255,255,0.7); font-weight:300; margin-bottom: 20px;" data-aos="fade-up">Join us amidst the scenic beauty of Bhimtal</p>
+        
+        <div class="event-container">
+            <!-- SANGEET -->
+            <div class="event-card" data-aos="fade-right" data-aos-duration="1000">
+                <div class="event-title">Sangeet Night</div>
+                <div class="event-details">
+                    <strong>📅 November 20, 2026</strong><br>
+                    ⏰ 5:00 PM Onwards<br><br>
+                    📍 <strong>Amar Hotel</strong><br>
+                    Bhimtal, Uttarakhand
+                </div>
+            </div>
+
+            <!-- WEDDING -->
+            <div class="event-card" data-aos="fade-left" data-aos-duration="1000">
+                <div class="event-title">The Wedding</div>
+                <div class="event-details">
+                    <strong>📅 November 21, 2026</strong><br>
+                    ⏰ 11:00 AM Onwards<br><br>
+                    📍 <strong>Amar Hotel</strong><br>
+                    Bhimtal, Uttarakhand
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps Gateway Button -->
+        <!-- Replace the URL with the exact Google Maps share link for Amar Hotel Bhimtal -->
+        <a href="https://maps.google.com/?q=Amar+Hotel+Bhimtal" target="_blank" class="btn" data-aos="zoom-in">📍 Navigate to Venue</a>
+    </div>
+
+    <!-- SECTION 3: RSVP FOR NON-TECH GUESTS -->
+    <div class="section" style="background: var(--dark-blue);">
+        <h1 data-aos="fade-down">Will You Grace Us?</h1>
+        <p style="color: var(--gold); margin-bottom: 30px;" data-aos="fade-up">Please let us know your plans by November 1st</p>
+
+        <!-- Dynamic Form: Automatically opens WhatsApp preset to message the couple directly -->
+        <form class="rsvp-form" id="rsvpForm" data-aos="zoom-in" onsubmit="sendRSVP(event)">
+            <div class="form-group">
+                <label for="guest-name">Your Name</label>
+                <input type="text" id="guest-name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="attendance">Are you attending?</label>
+                <select id="attendance" required>
+                    <option value="Yes, attending all functions! 🎉">Yes, attending all functions! 🎉</option>
+                    <option value="Attending only Sangeet 🕺">Attending only Sangeet 🕺</option>
+                    <option value="Attending only Wedding 🌸">Attending only Wedding 🌸</option>
+                    <option value="Regretfully declining 😔">Regretfully declining 😔</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="count">Total Guests Joining</label>
+                <select id="count">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4+ People</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Submit RSVP</button>
+        </form>
+    </div>
+
+    <!-- AOS JS Library & Logic -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+
+        // Background Music Handler (Handles browser autoplay restrictions natively)
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        let isPlaying = false;
+
+        // Automatically try to start audio on user's first click anywhere on screen
+        document.body.addEventListener('click', () => {
+            if(!isPlaying) {
+                playMusic();
+            }
+        }, { once: true });
+
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                musicBtn.innerText = "🔈";
+            } else {
+                music.play();
+                musicBtn.innerText = "🎵";
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function playMusic() {
+            music.play().then(() => {
+                isPlaying = true;
+                musicBtn.innerText = "🎵";
+            }).catch(e => console.log("Audio waiting for explicit interaction"));
+        }
+
+        // RSVP Processing Trick for zero-backend architecture
+        function sendRSVP(event) {
+            event.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const status = document.getElementById('attendance').value;
+            const count = document.getElementById('count').value;
+
+            // Generate structured text response
+            const text = `Hi Ayush & Nandini! Here is my RSVP for your wedding.%0A%0A*Name:* ${name}%0A*Attendance:* ${status}%0A*Total Guests:* ${count}`;
+            
+            // Replace with Ayush or Nandini's real phone number (with country code, e.g., 919876543210)
+            const phoneNumber = "910000000000"; 
+            
+            // Opens native WhatsApp app with prefilled structural text
+            window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
