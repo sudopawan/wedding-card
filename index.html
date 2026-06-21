@@ -6,7 +6,7 @@
     <title>॥ पवन एवं उपासना ॥ #UPWAN</title>
     
     <!-- Google Fonts: Calligraphy, Luxury Serifs, and elite Devanagari (Gotu & Yatra) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Gotu&family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Gotu&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Yatra+One&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -66,10 +66,10 @@
 
         .lang-prompt { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: #666; margin-bottom: 15px; }
 
-        .btn-box { display: flex; gap: 15px; margin-top: 5px; }
+        .btn-box { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 5px; }
         
         .btn-lang {
-            padding: 12px 28px; border-radius: 30px; cursor: pointer;
+            padding: 13px 28px; border-radius: 30px; cursor: pointer;
             font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 2px;
             background: white; color: var(--plum-ink); border: 1.5px solid var(--cartier-gold);
             box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;
@@ -112,11 +112,10 @@
         .en-name { font-family: 'Great Vibes', cursive; font-size: 4.8rem; color: var(--midnight-aubergine); font-weight: 400; line-height: 0.95; margin: 5px 0; }
         .hi-name { font-family: 'Gotu', sans-serif; font-size: 3.6rem; color: var(--midnight-aubergine); font-weight: 400; line-height: 1.1; margin: 10px 0; }
 
-        /* CORRECTED HINDI JOINER (एवं) */
         .vedic-joiner { font-family: 'Gotu', sans-serif; font-size: 1.6rem; font-weight: 600; color: var(--sanskrit-red); margin: -5px 0; }
         .lineage-sub { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: #777; margin-top: -2px; }
 
-        /* ================= 05. STABLE LAKE MIST PORTAL ================= */
+        /* ================= 05. CORRECTED COLOR-TRUE BHIMTAL PORTAL ================= */
         .bhimtal-portal {
             width: 100%; height: 320px; margin: 40px 0 30px 0;
             position: relative; z-index: 2;
@@ -124,16 +123,18 @@
             overflow: hidden; border: 2px solid var(--cartier-gold);
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             background-color: #2D1E36;
-            /* Stable Wikimedia photograph of Bhimtal Lake & Island */
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Bhimtal_Lake_%282%29.jpg/1024px-Bhimtal_Lake_%282%29.jpg');
-            background-size: 135%; background-position: center;
+            
+            background-image: url('bhimtal_image.jpg');
+            background-size: cover; background-position: center;
+            
             animation: slowBhimtalPan 22s infinite alternate ease-in-out;
-            filter: grayscale(15%) sepia(20%) hue-rotate(240deg) contrast(105%);
+            /* Filter corrected: zero color flipping, just clean photo optimization */
+            filter: contrast(104%) brightness(96%) saturate(95%);
         }
 
         @keyframes slowBhimtalPan {
-            0% { background-position: 0% 50%; background-size: 130%; }
-            100% { background-position: 100% 50%; background-size: 150%; }
+            0% { background-position: 0% 50%; background-size: 125%; }
+            100% { background-position: 100% 50%; background-size: 145%; }
         }
 
         .portal-vignette {
@@ -156,58 +157,39 @@
         }
         .btn-map:hover { background-color: var(--cartier-gold); color: var(--midnight-aubergine); }
 
-        /* ================= 07. LUXURY "EDITORIAL PRINT" RSVP FORM ================= */
+        /* ================= 07. RSVP ================= */
         .rsvp-card {
-            margin-top: 40px; padding: 45px 30px;
-            background-color: var(--form-blush);
-            border: 1px solid var(--cartier-gold);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            position: relative; z-index: 2;
+            margin-top: 40px; padding: 45px 30px; background-color: var(--form-blush);
+            border: 1px solid var(--cartier-gold); border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; z-index: 2;
         }
 
         .form-grid { display: flex; gap: 15px; margin-top: 25px; }
 
         .print-input, .print-select {
-            width: 100%; padding: 12px 4px;
-            font-family: 'Montserrat', sans-serif; font-size: 0.78rem;
-            color: var(--midnight-aubergine); background: transparent;
-            border: none; border-bottom: 1.5px solid rgba(200, 157, 76, 0.5);
-            border-radius: 0; outline: none; -webkit-appearance: none; appearance: none;
-            transition: all 0.3s ease;
+            width: 100%; padding: 12px 4px; font-family: 'Montserrat', sans-serif; font-size: 0.78rem;
+            color: var(--midnight-aubergine); background: transparent; border: none; border-bottom: 1.5px solid rgba(200, 157, 76, 0.5);
+            border-radius: 0; outline: none; -webkit-appearance: none; appearance: none; transition: all 0.3s ease;
         }
 
         .print-select {
             background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23432852' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat; background-position: right 4px center; background-size: 14px;
-            cursor: pointer;
+            background-repeat: no-repeat; background-position: right 4px center; background-size: 14px; cursor: pointer;
         }
 
-        .print-input:focus, .print-select:focus {
-            border-bottom-color: var(--plum-ink);
-            background-color: rgba(200, 157, 76, 0.04);
-        }
-
+        .print-input:focus, .print-select:focus { border-bottom-color: var(--plum-ink); background-color: rgba(200, 157, 76, 0.04); }
         .print-input::placeholder { color: #A89CAE; }
 
         .btn-submit {
-            width: 100%; margin-top: 30px; padding: 15px; border-radius: 30px;
-            font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600;
-            letter-spacing: 3px; text-transform: uppercase; cursor: pointer;
-            background: var(--plum-ink); color: var(--form-blush);
-            border: 1px solid var(--cartier-gold); transition: all 0.3s;
+            width: 100%; margin-top: 30px; padding: 15px; border-radius: 30px; font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 3px; text-transform: uppercase; cursor: pointer; background: var(--plum-ink); color: var(--form-blush); border: 1px solid var(--cartier-gold); transition: all 0.3s;
         }
         .btn-submit:hover { background: var(--cartier-gold); color: var(--midnight-aubergine); }
 
-        /* ================= 08. FLOATING MUSIC TOGGLE ================= */
         .music-controller {
-            position: fixed; bottom: 25px; right: 25px;
-            z-index: 10000; width: 48px; height: 48px; border-radius: 50%;
-            background-color: var(--cartier-gold); color: var(--midnight-aubergine);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem; cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid white;
-            transition: transform 0.3s ease, background-color 0.3s;
+            position: fixed; bottom: 25px; right: 25px; z-index: 10000; width: 48px; height: 48px; border-radius: 50%;
+            background-color: var(--cartier-gold); color: var(--midnight-aubergine); display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid white; transition: transform 0.3s ease, background-color 0.3s;
         }
         .music-controller:hover { transform: scale(1.1); background-color: white; }
 
@@ -219,6 +201,7 @@
             .event-time { text-align: left; }
             .en-name { font-size: 4.2rem; }
             .hi-name { font-size: 3.1rem; }
+            .btn-lang { padding: 12px 20px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -230,14 +213,17 @@
         <div class="om-seal">ॐ</div>
         <div style="font-size: 1.25rem; font-weight: 600; font-style: italic; color: var(--sanskrit-red); margin-bottom: 25px;">॥ श्री गणेशाय नमः ॥</div>
         
-        <div class="lang-prompt">Please select your invitation language:</div>
+        <div class="lang-prompt">Please select your invitation view:</div>
         
+        <!-- THE NEW DOORWAY PAIR -->
         <div class="btn-box">
             <button class="btn-lang" onclick="unsealCard('hi')">
-                <span style="font-size: 1.15rem; color: var(--sanskrit-red);">🪔</span> हिंदी प्रवेश
+                <span style="font-size: 1.15rem; color: var(--sanskrit-red);">🪔</span> 
+                <span style="font-family: 'Gotu', sans-serif; font-weight: 600; font-size: 0.85rem;">॥ शुभाशीष ॥</span>
             </button>
             <button class="btn-lang" onclick="unsealCard('en')">
-                <span style="font-size: 1.15rem; color: var(--cartier-gold);">✦</span> English
+                <span style="font-size: 1.15rem; color: var(--cartier-gold);">✦</span> 
+                <span>Celebrate With Us</span>
             </button>
         </div>
     </div>
@@ -257,18 +243,15 @@
                     निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
                 </div>
 
-                <!-- PARENTS INVITATION HEADER -->
                 <div class="en meta-sub">Request the honor of your presence at the Shubh Vivah of</div>
                 <div class="en parents-line">Mrs. Rani Pandey & Mr. R.C Pandey’s beloved son</div>
 
                 <div class="hi parents-line" style="font-style: normal; font-family: 'Cormorant Garamond', serif;">श्रीमती रानी पाण्डेय एवं श्री आर. सी. पाण्डेय</div>
                 <div class="hi meta-sub" style="margin-bottom: 10px;">अपने सुपुत्र के पावन परिणय समारोह में आपको सपरिवार सादर आमंत्रित करते हैं:</div>
                 
-                <!-- GROOM -->
                 <div class="en en-name">Pawan</div>
                 <div class="hi hi-name">पवन</div>
                 
-                <!-- CORRECTED HINDI CONNECTOR (एवं) -->
                 <div style="margin: 8px 0;">
                     <span style="font-size: 0.8rem; color: var(--cartier-gold);">✦</span>
                     <span class="en" style="font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 4px; margin: 0 10px; color: var(--plum-ink); font-weight: 600;">WITH</span>
@@ -276,7 +259,6 @@
                     <span style="font-size: 0.8rem; color: var(--cartier-gold);">✦</span>
                 </div>
 
-                <!-- BRIDE -->
                 <div class="en en-name">Upasana</div>
                 <div class="hi hi-name">उपासना</div>
 
@@ -289,7 +271,7 @@
                     </span>
                 </div>
 
-                <!-- STABLE LAKE MIST PORTAL -->
+                <!-- CORRECTED COLOR-TRUE BHIMTAL PORTAL -->
                 <div class="bhimtal-portal">
                     <div class="portal-vignette"></div>
                 </div>
@@ -363,7 +345,7 @@
                 </a>
             </div>
 
-            <!-- LUXURY RSVP SECTION -->
+            <!-- RSVP -->
             <div class="rsvp-card" style="text-align: center;">
                 <span class="en meta-sub" style="color: var(--sanskrit-red);">॥ R . S . V . P ॥</span>
                 <span class="hi meta-sub" style="color: var(--sanskrit-red); font-size: 0.8rem;">॥ अतिथि सत्कार ॥</span>
@@ -371,7 +353,6 @@
                 <div class="en" style="font-size: 0.8rem; color: #777; margin-top: 4px;">We look forward to celebrating with you</div>
                 <div class="hi" style="font-size: 0.85rem; color: #777; margin-top: 4px; font-family: 'Gotu';">आपकी गरिमामयी उपस्थिति प्रार्थनीय है</div>
 
-                <!-- 1. PURE ENGLISH FORM -->
                 <form class="en" onsubmit="sendRSVP(event, 'en')">
                     <div class="form-grid">
                         <input type="text" class="print-input" id="name-en" placeholder="Your Full Name*" required>
@@ -394,10 +375,9 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn-submit">Transmit RSVP</button>
+                    <button type="submit" class="btn-submit">RSVP</button>
                 </form>
 
-                <!-- 2. PURE HINDI FORM -->
                 <form class="hi" onsubmit="sendRSVP(event, 'hi')">
                     <div class="form-grid">
                         <input type="text" class="print-input" id="name-hi" placeholder="आपका शुभ नाम*" required>
@@ -442,12 +422,11 @@
         </div>
     </div>
 
-    <!-- MP3 AUDIO ASSET HOOK -->
+    <!-- MP3 HOOK -->
     <audio id="bg-track" loop preload="auto">
-        <source src="mhrw.mp3" type="audio/mp3">
+        <source src="shubh-vivah.mp3" type="audio/mp3">
     </audio>
 
-    <!-- FLOATING MUTE BUTTON -->
     <div class="music-controller" id="sound-btn" onclick="toggleAudio()">🪕</div>
 
     <script>
@@ -460,12 +439,11 @@
             document.getElementById('vellum-sleeve').classList.add('sleeve-open');
             window.scrollTo(0, 0);
 
-            // Audio Autoplay trigger
             audio.play().then(() => {
                 isPlaying = true;
                 soundBtn.innerText = "🪕";
             }).catch((err) => {
-                console.log("Audio autoplay restricted by user's browser setting.");
+                console.log("Audio autoplay restricted by browser settings.");
             });
         }
 
@@ -491,7 +469,7 @@
                 ? `सादर प्रणाम पवन एवं उपासना! 🙏\nविवाह में हमारी उपस्थिति का विवरण:\n\n*नाम:* ${name}\n*सदस्य:* ${count}\n*योजना:* ${plan}\n\n#UPWAN 🌸`
                 : `Namaste Pawan & Upasana! 🙏\nHere is my official RSVP:\n\n*Name:* ${name}\n*Guests:* ${count}\n*Plan:* ${plan}\n\n#UPWAN 🌸`;
 
-            // REMEMBER TO UPDATE THIS WITH YOUR ACTUAL WHATSAPP NUMBER
+            // REMEMBER TO PUT YOUR WHATSAPP NUMBER HERE
             const targetPhone = "910000000000"; 
             window.open(`https://api.whatsapp.com/send?phone=${targetPhone}&text=${encodeURIComponent(text)}`, '_blank');
         }
